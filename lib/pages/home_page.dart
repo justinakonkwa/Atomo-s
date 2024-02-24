@@ -3,9 +3,8 @@
 import 'package:cite_phila/pages/live_page.dart';
 import 'package:cite_phila/pages/movie_page.dart';
 import 'package:cite_phila/widgets/colors.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
-
 
 BorderRadius borderRadius = BorderRadius.circular(10);
 SizedBox sizedbox = const SizedBox(height: 10);
@@ -33,13 +32,11 @@ class _HomePageState extends State<HomePage> {
       body: SafeArea(
         child: DefaultTabController(
           initialIndex: widget.currentIndex,
-          length: 3,
+          length: 2,
           child: Stack(alignment: Alignment.bottomCenter, children: [
             TabBarView(
               children: [
                 const VideoPage(),
-                LivePage(
-                    videoTitre: widget.videoTitre, videoUrl: widget.videoUrl),
                 LivePage(
                     videoTitre: widget.videoTitre, videoUrl: widget.videoUrl),
               ],
@@ -47,7 +44,7 @@ class _HomePageState extends State<HomePage> {
             Padding(
               padding: const EdgeInsets.only(bottom: 10),
               child: Container(
-                width: 200,
+                width: 150,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(40),
                   boxShadow: const [
@@ -74,7 +71,7 @@ class _HomePageState extends State<HomePage> {
                     indicatorSize: TabBarIndicatorSize.tab,
                     indicator: BoxDecoration(
                       color: AppColors.activColor,
-                      borderRadius: BorderRadius.circular(25.0),
+                      borderRadius: BorderRadius.circular(15.0),
                     ),
                     mouseCursor: MouseCursor.uncontrolled,
                     indicatorColor: Theme.of(context).focusColor,
@@ -83,21 +80,14 @@ class _HomePageState extends State<HomePage> {
                     tabs: const [
                       Tab(
                         child: Icon(
-                          Icons.home,
+                          CupertinoIcons.home,
                           size: 30,
                           // color: Theme.of(context).hintColor,
                         ),
                       ),
                       Tab(
                         child: Icon(
-                          Icons.live_tv,
-                          size: 30,
-                          // color:Theme.of(context).hintColor,
-                        ),
-                      ),
-                      Tab(
-                        child: Icon(
-                          Icons.live_tv,
+                          CupertinoIcons.tv_music_note,
                           size: 30,
                           // color:Theme.of(context).hintColor,
                         ),

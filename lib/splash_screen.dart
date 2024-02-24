@@ -2,7 +2,9 @@
 
 import 'dart:async';
 import 'package:cite_phila/pages/home_page.dart';
+import 'package:cite_phila/provider/dark_theme_provider.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class Splash extends StatefulWidget {
   const Splash({super.key});
@@ -28,11 +30,12 @@ class _SplashState extends State<Splash> {
     // final themeChange = Provider.of<DarkThemeProvider>(context);
     // bool isTheme = themeChange.darkTheme;
     return Container(
+    
       height: double.maxFinite,
       decoration: const BoxDecoration(
         image: DecorationImage(
-          image: AssetImage("images/walesa.jpg"),
-          fit: BoxFit.cover,
+          image: AssetImage("images/logo.png"),
+         fit: BoxFit.cover
         ),
       ),
     );

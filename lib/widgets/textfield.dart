@@ -20,7 +20,7 @@ Widget textEdit(
     controller: controller,
     cursorColor: Theme.of(context).hintColor,
     style: TextStyle(
-        color: Theme.of(context).hintColor, fontSize: 14, fontFamily: 'Nunito'),
+        color: Theme.of(context).hintColor, fontSize: 14, fontFamily: 'Montserrat'),
     decoration: InputDecoration(
       icon: isIcon == true
           ? Icon(

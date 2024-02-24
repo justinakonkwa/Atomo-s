@@ -1,6 +1,6 @@
+// ignore_for_file: must_be_immutable, library_private_types_in_public_api, unnecessary_null_comparison
 
-
-// ignore_for_file: must_be_immutable, library_private_types_in_public_api
+import 'dart:io';
 
 import 'package:cite_phila/pages/home_page.dart';
 import 'package:cite_phila/pages/movie_page.dart';
@@ -9,7 +9,6 @@ import 'package:cite_phila/widgets/colors.dart';
 import 'package:cite_phila/widgets/lign.dart';
 import 'package:flutter/material.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
-
 
 class PlayerPage extends StatefulWidget {
   PlayerPage({Key? key, required this.videoLink, required this.videoTitre})
@@ -23,14 +22,14 @@ class PlayerPage extends StatefulWidget {
 class _PlayerPageState extends State<PlayerPage> {
   late YoutubePlayerController _controller;
 
-  // String? getBannerAdUnitId() {
-  //   if (Platform.isIOS) {
-  //     return 'ca-app-pub-2698138965577450/3425404109';
-  //   } else if (Platform.isAndroid) {
-  //     return 'ca-app-pub-2698138965577450/3866180785';
-  //   }
-  //   return null;
-  // }
+  String? getBannerAdUnitId() {
+    if (Platform.isIOS) {
+      return 'ca-app-pub-2698138965577450/2875923278';
+    } else if (Platform.isAndroid) {
+      return 'ca-app-pub-2698138965577450/2875923278';
+    }
+    return null;
+  } 
 
   @override
   void initState() {

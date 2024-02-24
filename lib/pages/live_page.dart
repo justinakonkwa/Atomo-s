@@ -43,7 +43,7 @@ class _LivePageState extends State<LivePage> {
     });
     try {
       final videoResponse = await http.get(Uri.parse(
-          'https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UCpl-8yOibCjQYPPOU-j3Syg&maxResults=100&order=date&type=video&key=$apiKey'));
+          'https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UCPktGhhIpMbOqj9eKvH0Rtw&maxResults=100&order=date&type=video&key=$apiKey'));
 
       final videoItems = json.decode(videoResponse.body)['items'];
       final videos = videoItems
@@ -95,14 +95,14 @@ class _LivePageState extends State<LivePage> {
     }
   }
 
-  // String? getBannerAdUnitId() {
-  //   if (Platform.isIOS) {
-  //     return 'ca-app-pub-2698138965577450/3425404109';
-  //   } else if (Platform.isAndroid) {
-  //     return 'ca-app-pub-2698138965577450/3866180785';
-  //   }
-  //   return null;
-  // }
+  String? getBannerAdUnitId() {
+    if (Platform.isIOS) {
+      return 'ca-app-pub-2698138965577450/2875923278';
+    } else if (Platform.isAndroid) {
+      return 'ca-app-pub-2698138965577450/2875923278';
+    }
+    return null;
+  }
 
   @override
   void initState() {
@@ -117,6 +117,7 @@ class _LivePageState extends State<LivePage> {
     super.initState();
   }
 
+  @override
   void dispose() {
     super.dispose();
   }
@@ -141,7 +142,7 @@ class _LivePageState extends State<LivePage> {
               padding: const EdgeInsets.only(left: 20, right: 20, bottom: 10),
               alignment: Alignment.centerLeft,
               child: AppTextLarge(
-                text: 'Walesa',
+                text: 'Dr Athom\'s',
                 size: 20,
                 color: AppColors.activColor,
               ),

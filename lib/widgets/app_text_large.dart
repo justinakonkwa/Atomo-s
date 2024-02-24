@@ -20,7 +20,7 @@ class AppTextLarge extends StatelessWidget {
       style: TextStyle(
         color: color,
         fontSize: size,
-        fontFamily: 'Nunito',
+        fontFamily: 'Montserrat',
         fontWeight: FontWeight.bold,
         letterSpacing: 0,
       ),

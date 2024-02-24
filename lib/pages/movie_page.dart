@@ -10,6 +10,7 @@ import 'package:cite_phila/widgets/colors.dart';
 import 'package:cite_phila/widgets/lign.dart';
 import 'package:cite_phila/widgets/search_screen.dart';
 import 'package:connectivity_plus/connectivity_plus.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:new_version_plus/new_version_plus.dart';
@@ -40,7 +41,7 @@ class _VideoPageState extends State<VideoPage> with WidgetsBindingObserver {
     checkInternetConnectivity();
     final newVersion = NewVersionPlus(
       iOSId: 'com.disney.disneyplus',
-      androidId: 'com.communaute.walesa',
+      androidId: 'com.naara.cite_phila',
       androidPlayStoreCountry: null,
     );
 
@@ -97,7 +98,7 @@ class _VideoPageState extends State<VideoPage> with WidgetsBindingObserver {
   Future<List<VideoItem>> fetchVideos() async {
     var apiKey = 'AIzaSyD-P2V-r6OOqqG1XE7BkyQyhIoa1JP5sDo';
     var channelId = 'UCpl-8yOibCjQYPPOU-j3Syg';
-    var maxResults = 3;
+    var maxResults = 50;
 
     var apiUrl =
         'https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=$channelId&maxResults=$maxResults&key=$apiKey';
@@ -204,7 +205,7 @@ class _VideoPageState extends State<VideoPage> with WidgetsBindingObserver {
                       child: AppTextLarge(
                         text: 'Cité phila d\'Exaucement',
                         color: Theme.of(context).hintColor,
-                        size: 25,
+                        size: 22,
                       ),
                     ),
                   ],
@@ -444,9 +445,9 @@ class _VideoPageState extends State<VideoPage> with WidgetsBindingObserver {
                                                     // donner les avis
                                                     StoreRedirect.redirect(
                                                       androidAppId:
-                                                          'com.communaute.walesa',
+                                                          'com.naara.cite_phila',
                                                       iOSAppId:
-                                                          'com.communaute.walesa',
+                                                          'com.naara.cite_phila',
                                                     );
                                                   },
                                                   style: ButtonStyle(
@@ -528,7 +529,7 @@ class _VideoPageState extends State<VideoPage> with WidgetsBindingObserver {
                                                             maxScale:
                                                                 5.0, // Échelle maximale du zoom
                                                             child: Image.asset(
-                                                              'images/walesa2.jpg',
+                                                              'images/culte_programe.jpg',
                                                               fit: BoxFit
                                                                   .contain,
                                                             ),
@@ -664,12 +665,10 @@ class _VideoPageState extends State<VideoPage> with WidgetsBindingObserver {
                           );
                         });
                   },
-                  child: Transform.rotate(
-                    angle: 180 * 3.1415927 / 90, // Angle de rotation en radians
-                    child: const Icon(
-                      Icons.settings,
-                      size: 35.0,
-                    ),
+                  child: const Icon(
+                    CupertinoIcons.settings,
+                    size: 30.0,
+                    color: AppColors.activColor,
                   ),
                 )
               ],
@@ -677,7 +676,7 @@ class _VideoPageState extends State<VideoPage> with WidgetsBindingObserver {
             Container(
               alignment: Alignment.topLeft,
               child: AppTextLarge(
-                text: 'Dr Athom\'s Mbumba',
+                text: 'Dr Athom\'s Mbuma',
                 size: 20,
                 color: AppColors.activColor,
               ),
@@ -897,7 +896,14 @@ class _VideoPageState extends State<VideoPage> with WidgetsBindingObserver {
           ),
           content: AppText(
             text:
-                'Le pasteur Kabundi Walesa a appelé les chrétiens de son église, en particulier et la population congolaise en général, à soutenir spirituellement le chef de l’État Félix Antoine Tshisekedi Tshilombo pour la réussite de son mandat en cours',
+                '''Telle une ville bâtie au-dessus d’une montagne qui ne peut pas échapper des regards, nous sommes une cité ambassadrice de Christ-Jésus, influente par une vie pratique.
+
+Phila-Cité d’Exaucement est une église biblique qui expose chaque personne à la Parole de Dieu et à l’œuvre de son Esprit.
+
+Aujourd’hui, nous nous réunissons comme une seule église dans de nombreux endroits chaque semaine.
+
+A la Cité d’Exaucement, tout tourne autour de Christ.
+Notre expression d’amour pour Dieu est d’aimer les gens et leur présenter à Christ, et nous le faisons en aidant les personnes qui viennent à Phila à grandir dans leur relation avec le Seigneur de manière pratique afin de manifester Christ dans la famille et dans la communauté.''',
             size: 14,
             color: Theme.of(context).hintColor,
           ),
@@ -927,30 +933,23 @@ class _VideoPageState extends State<VideoPage> with WidgetsBindingObserver {
               ),
               sizedbox,
               AppText(
-                text: 'nganduflory9@gmail.com',
-                color: Theme.of(context).hintColor,
+                text: 'naara@gmail.com',
+                color: Theme.of(context).cardColor,
               ),
               AppText(
-                text: '+243 826 671 449',
-                color: Theme.of(context).hintColor,
+                text: '+243 975 024 769',
+                color: Theme.of(context).cardColor,
               ),
-              // AppText(
-              //   text: 'pacomecuma2.0@gmail.com',
-              //   color: Theme.of(context).cardColor,
-              // ),
-              // AppText(
-              //   text: '+243 972 876 858',
-              //   color: Theme.of(context).cardColor,
-              // ),
-              // sizedbox,
-              // AppText(
-              //   text: 'justinakonwa0@gmail.com',
-              //   color: Theme.of(context).cardColor,
-              // ),
-              // AppText(
-              //   text: '+243 975 024 769',
-              //   color: Theme.of(context).cardColor,
-              // ),
+              AppText(
+                text: 'pacomecuma2.0@gmail.com',
+                color: Theme.of(context).cardColor,
+              ),
+              AppText(
+                text: '+243 972 876 858',
+                color: Theme.of(context).cardColor,
+              ),
+              sizedbox,
+              
             ],
           ),
           shape: RoundedRectangleBorder(borderRadius: borderRadius),

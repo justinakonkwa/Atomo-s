@@ -6,7 +6,6 @@ import 'package:cite_phila/widgets/colors.dart';
 import 'package:flutter/material.dart';
 
 
-
 //page qui donne l'annimation des pages secondaire et qui possede l'iconButton de retour
 const _maxHeaderExtent = 95.0;
 const _minHeaderExtent = 50.0;

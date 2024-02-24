@@ -1,4 +1,4 @@
-package com.example.cite_phila
+package com.naara.cite_phila
 
 import io.flutter.embedding.android.FlutterActivity
 
