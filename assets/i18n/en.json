@@ -1,0 +1,89 @@
+{
+  "menu": {
+    "menu_0": "Dr Athom's Mbuma",
+    "menu_1": "Home",
+    "menu_2": "Live",
+    "menu_3": "Download",
+    "menu_4": "Settings"
+  },
+  "button": {
+    "cancel": "Cancel",
+    "yes": "Yes",
+    "delete": "Delete"
+  },
+  "language": {
+    "name": {
+      "en": "English",
+      "fr": "French"
+    },
+    "selected_message": "Currently selected language is {language}",
+    "selection": {
+      "message": "Please select a language from the list",
+      "title": "Language Selection"
+    },
+    "change_language": "Change Language"
+  },
+  "theme": {
+    "ok": "OK",
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
+  },
+  "update": {
+    "title": "Update Available",
+    "subtitle_1": "We are excited to present to you the",
+    "subtitle_2": "version of our application, bringing many improvements and features compared to the previous version (version ",
+    "button_1": "Install",
+    "button_2": "Later"
+  },
+  "home_page": {
+    "subtitle_1": "Phila-Cité d'Exaucement",
+    "subtitle_2": "Search...",
+    "subtitle_3": "Server connection error. Please check your internet connection.",
+    "button_1": "Share Video",
+    "button_2": "Download",
+    "button_3": "History",
+    "button_4": "Try again"
+  },
+  "live": {
+    "subtitle_1": "Live",
+    "subtitle_2": "No live streaming available",
+    "subtitle_3": "No live videos",
+    "subtitle_4": "at",
+    "button": "Refresh"
+  },
+  "history": {
+    "title": "History",
+    "subtitle_1": "Downloaded",
+    "subtitle_2": "In Progress",
+    "subtitle_3": "Title",
+    "subtitle_4": "Size",
+    "subtitle_5": "Duration",
+    "show_message_1": "Do you want to delete this video?",
+    "show_message_2": "Do you want to stop downloading this video?",
+    "show_message_3": "This video is already downloaded! Do you want to download it again?",
+    "button_1": "Delete",
+    "button_2": "Stop",
+    "button_3": "Download",
+    "button_4": "Play"
+  },
+  "settings": {
+    "personal_info": "Personal Info",
+    "general": "General",
+    "manage_subscription": "Manage Subscription",
+    "language": "Language",
+    "logout": "Logout",
+    "logout_message": "Are you sure you want to logout?",
+    "logout_success": "Logout successfully",
+    "logout_error": "Error while logout",
+    "reminder": "Reminders",
+    "support_and_feedback": "Support & Feedback",
+    "contactUs": "Contact Us",
+    "leaveReview": "Leave a Review",
+    "shareApp": "Share the App",
+    "app": "App Info",
+    "sub_app": "Explore our religious application, offering a variety of videos, both simple and live, to enrich your spiritual journey. Explore educational videos, inspiring teachings, and live celebrations. Immerse yourself in straightforward video content, accessible at any time, or participate in live broadcasts for real-time spiritual connection. Stay connected to your faith through our diverse video library and captivating live streams.",
+    "privacy_policy": "Privacy Policy",
+    "terms_and_conditions": "Terms & Conditions"
+  }
+}

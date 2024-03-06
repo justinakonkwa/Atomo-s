@@ -1,0 +1,91 @@
+{
+  "menu": {
+    "menu_0": "Dr Athom's Mbuma",
+    "menu_1": "Accueil",
+    "menu_2": "En direct",
+    "menu_3": "Téléchargement",
+    "menu_4": "Paramètres"
+  },
+  "button": {
+    "cancel": "Annuler",
+    "yes": "Oui",
+    "delete": "Supprimer"
+  },
+
+  "language": {
+    "name": {
+      "en": "Anglais",
+      "fr": "Français"
+    },
+    "selected_message": "La langue actuellement sélectionnée est {langue}",
+    "selection": {
+      "message": "Veuillez sélectionner une langue dans la liste",
+      "title": "Sélection de la langue"
+    },
+    "change_language": "Changer de langue"
+  },
+
+  "theme": {
+    "ok": "OK",
+    "light": "Clair",
+    "dark": "Sombre",
+    "system": "Système"
+  },
+  "update": {
+    "title": "Mise à jour disponible",
+    "subtitle_1": "Nous sommes ravis de vous présenter la version",
+    "subtitle_2": "de notre application, qui apporte de nombreuses améliorations et fonctionnalités par rapport à la version précédente (version ",
+    "button_1": "Installer",
+    "button_2": "Plus tard"
+  },
+  "home_page": {
+    "subtitle_1": "Phila-Cité d'Exaucement",
+    "subtitle_2": "Rechercher...",
+    "subtitle_3": "Problème de connexion au serveur. Veuillez vérifier votre connexion internet.",
+    "button_1": "Partager la vidéo",
+    "button_2": "Télécharger",
+    "button_3": "Historique",
+    "button_4": "Réessayer"
+  },
+  "live": {
+    "subtitle_1": "En direct",
+    "subtitle_2": "Pas de diffusion directe",
+    "subtitle_3": "Aucune vidéo en direct",
+    "subtitle_4": "à",
+    "button": "Actualiser"
+  },
+  "history": {
+    "title": "Historique",
+    "subtitle_1": "Téléchargées",
+    "subtitle_2": "En cours",
+    "subtitle_3": "Titre",
+    "subtitle_4": "Taille",
+    "subtitle_5": "Durée",
+    "show_message_1": "Souhaitez-vous supprimer cette vidéo ?",
+    "show_message_2": "Souhaitez-vous arrêter le téléchargement de cette vidéo ?",
+    "show_message_3": "Cette vidéo est déjà téléchargée ! Souhaitez-vous la télécharger à nouveau ?",
+    "button_1": "Supprimer",
+    "button_2": "Arrêter",
+    "button_3": "Télécharger",
+    "button_4": "Lire"
+  },
+  "settings": {
+    "personal_info": "Informations personnelles",
+    "general": "Général",
+    "manage_subscription": "Gérer l'abonnement",
+    "language": "Langue",
+    "logout": "Déconnexion",
+    "logout_message": "Êtes-vous sûr de vouloir vous déconnecter ?",
+    "logout_success": "Déconnexion réussie",
+    "logout_error": "Erreur lors de la déconnexion",
+    "reminder": "Rappels",
+    "support_and_feedback": "Support et commentaires",
+    "contactUs": "Contactez-nous",
+    "leaveReview": "Laisser un avis",
+    "shareApp": "Partager l'application",
+    "app": "Informations sur l'application",
+    "sub_app": "Découvrez notre application religieuse, offrant une variété de vidéos à la fois simples et en direct pour enrichir votre parcours spirituel. Explorez des vidéos éducatives, des enseignements inspirants et des célébrations en direct. Plongez dans des contenus vidéo simples, accessibles à tout moment, ou participez à des diffusions en direct pour une connexion spirituelle en temps réel. Restez connecté à votre foi grâce à notre bibliothèque vidéo diversifiée et à des diffusions en direct captivantes.",
+    "privacy_policy": "Politique de confidentialité",
+    "terms_and_conditions": "Conditions générales"
+  }
+}

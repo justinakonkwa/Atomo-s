@@ -1,17 +1,16 @@
-// ignore_for_file: constant_identifier_names
+// ignore_for_file: constant_identifier_names, file_names
 
 import 'package:shared_preferences/shared_preferences.dart';
 
-class DarkThemePreferences {
-  static const THEME_STATUS = "THEMESTATUS";
+class ThemePreferences {
+  static const THEME_STATUS = "Theme_status";
 
-  setDarkTheme (bool value) async {
+  setTheme(bool value) async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
-
     prefs.setBool(THEME_STATUS, value);
   }
 
-  Future<bool> getTheme() async{
+   Future<bool> getTheme() async{
     SharedPreferences prefs = await SharedPreferences.getInstance();
     return prefs.getBool(THEME_STATUS)?? false;
   }

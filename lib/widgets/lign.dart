@@ -1,6 +1,4 @@
-import 'package:cite_phila/widgets/colors.dart';
 import 'package:flutter/material.dart';
-
 
 //page qui posside une class qui m'offret une ligne de separation
 class Lign extends StatelessWidget {
@@ -11,15 +9,10 @@ class Lign extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 20,
-      child: Divider(
-        height: 10,
-        thickness: 0.5,
-        indent: indent,
-        endIndent: endIndent,
-        color: AppColors.simpleFondColor2,
-      ),
+    return Container(
+      margin:  EdgeInsets.only(left: indent, right: endIndent),
+      height: 0.4,
+      color: Theme.of(context).colorScheme.tertiary,
     );
   }
 }
