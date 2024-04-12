@@ -28,7 +28,6 @@ class SearchPage extends StatefulWidget {
 
 class _SearchPageState extends State<SearchPage>
     with SingleTickerProviderStateMixin {
-  AppOpenAd? openAd;
   late AnimationController _controller;
   late Animation<double> _opacityAnimation;
   TextEditingController textSearch = TextEditingController();
@@ -75,21 +74,6 @@ class _SearchPageState extends State<SearchPage>
   void dispose() {
     _controller.dispose();
     super.dispose();
-  }
-
-  Future<void> loadAd() async {
-    await AppOpenAd.load(
-      adUnitId: getAppOpenAd()!,
-      request: const AdRequest(),
-      adLoadCallback: AppOpenAdLoadCallback(onAdLoaded: (ad) {
-        log('ad is loaded');
-        openAd = ad;
-        openAd!.show();
-      }, onAdFailedToLoad: (error) {
-        log('ad failed to load $error');
-      }),
-      orientation: AppOpenAd.orientationPortrait,
-    );
   }
 
   @override
@@ -186,10 +170,6 @@ class _SearchPageState extends State<SearchPage>
                             child: myListVideo(
                               context,
                               () {
-                                if (openAd == null) {
-                                  log('trying tto show before loading');
-                                  loadAd();
-                                }
                                 Navigator.push(
                                   context,
                                   MaterialPageRoute(

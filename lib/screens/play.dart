@@ -28,7 +28,6 @@ class VideoPlayerPage extends StatefulWidget {
 
 class _VideoPlayerPageState extends State<VideoPlayerPage> {
   late BannerAd bannerAd;
-  AppOpenAd? openAd;
   late YoutubePlayerController _controller;
   String title = '';
 
@@ -72,20 +71,6 @@ class _VideoPlayerPageState extends State<VideoPlayerPage> {
     super.dispose();
   }
 
-  Future<void> loadAd() async {
-    await AppOpenAd.load(
-      adUnitId: getAppOpenAd()!,
-      request: const AdRequest(),
-      adLoadCallback: AppOpenAdLoadCallback(onAdLoaded: (ad) {
-        log('ad is loaded');
-        openAd = ad;
-        openAd!.show();
-      }, onAdFailedToLoad: (error) {
-        log('ad failed to load $error');
-      }),
-      orientation: AppOpenAd.orientationPortrait,
-    );
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -152,10 +137,6 @@ class _VideoPlayerPageState extends State<VideoPlayerPage> {
                               child: myListVideo(
                                 context,
                                 () async {
-                                  if (openAd == null) {
-                                    log('trying tto show before loading');
-                                    loadAd();
-                                  }
                                   setState(() {
                                     Navigator.pushAndRemoveUntil(
                                       context,

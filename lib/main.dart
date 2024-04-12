@@ -1,11 +1,14 @@
 // ignore_for_file: unused_local_variable, unrelated_type_equality_checks, body_might_complete_normally_catch_error
 
 // import 'package:admob_flutter/admob_flutter.da
+import 'dart:developer';
+
 import 'package:cite_phila/page/home_page.dart';
 import 'package:cite_phila/page/live_page.dart';
 import 'package:cite_phila/screens/search_screen.dart';
 import 'package:cite_phila/splash_screen.dart';
 import 'package:cite_phila/theme/theme_provider.dart';
+import 'package:cite_phila/widgets/variables.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -60,7 +63,31 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+  AppOpenAd? openAd;
 
+  Future<void> loadAd() async {
+    await AppOpenAd.load(
+      adUnitId: getAppOpenAd()!,
+      request: const AdRequest(),
+      adLoadCallback: AppOpenAdLoadCallback(onAdLoaded: (ad) {
+        log('ad is loaded');
+        openAd = ad;
+        openAd!.show();
+      }, onAdFailedToLoad: (error) {
+        log('ad failed to load $error');
+      }),
+      orientation: AppOpenAd.orientationPortrait,
+    );
+  }
+
+  @override
+  void initState() {
+    if (openAd == null) {
+      log('trying tto show before loading');
+      loadAd();
+    }
+    super.initState();
+  }
   @override
   Widget build(BuildContext context) {
     var localizationDelegate = LocalizedApp.of(context).delegate;

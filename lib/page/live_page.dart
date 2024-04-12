@@ -35,7 +35,6 @@ class LivePage extends StatefulWidget {
 }
 
 class _LivePageState extends State<LivePage> {
-  AppOpenAd? openAd;
   late YoutubePlayerController _controller;
   bool isError = false;
   bool isLive = false;
@@ -123,21 +122,6 @@ class _LivePageState extends State<LivePage> {
       _controller.dispose();
     }
     super.dispose();
-  }
-
-  Future<void> loadAd() async {
-    await AppOpenAd.load(
-      adUnitId: getAppOpenAd()!,
-      request: const AdRequest(),
-      adLoadCallback: AppOpenAdLoadCallback(onAdLoaded: (ad) {
-        log('ad is loaded');
-        openAd = ad;
-        openAd!.show();
-      }, onAdFailedToLoad: (error) {
-        log('ad failed to load $error');
-      }),
-      orientation: AppOpenAd.orientationPortrait,
-    );
   }
 
   @override
@@ -371,10 +355,6 @@ class _LivePageState extends State<LivePage> {
                     : myListVideo(
                         context,
                         () async {
-                          if (openAd == null) {
-                            log('trying tto show before loading');
-                            loadAd();
-                          }
                           setState(() {
                             Navigator.pushAndRemoveUntil(
                               context,

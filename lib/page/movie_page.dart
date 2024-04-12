@@ -35,28 +35,12 @@ class VideoPage extends StatefulWidget {
 
 class _VideoPageState extends State<VideoPage> with WidgetsBindingObserver {
   bool isLoading = true;
-  AppOpenAd? openAd;
 
   @override
   void initState() {
     super.initState();
     checkInternetConnectivity();
     getChannelVideos();
-  }
-
-  Future<void> loadAd() async {
-    await AppOpenAd.load(
-      adUnitId: getAppOpenAd()!,
-      request: const AdRequest(),
-      adLoadCallback: AppOpenAdLoadCallback(onAdLoaded: (ad) {
-        log('ad is loaded');
-        openAd = ad;
-        openAd!.show();
-      }, onAdFailedToLoad: (error) {
-        log('ad failed to load $error');
-      }),
-      orientation: AppOpenAd.orientationPortrait,
-    );
   }
 
   // Fonction pour récupérer les vidéos
@@ -223,10 +207,6 @@ class _VideoPageState extends State<VideoPage> with WidgetsBindingObserver {
                           ),
                           GestureDetector(
                             onTap: () async {
-                              if (openAd == null) {
-                                log('trying tto show before loading');
-                                loadAd();
-                              }
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
