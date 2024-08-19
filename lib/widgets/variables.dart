@@ -52,7 +52,7 @@ const String playStoreUrl =
     'https://play.google.com/store/apps/details?id=com.naara.cite_phila';
 // link of privacy policy
 const String privacyUrl =
-    'https://raw.githubusercontent.com/Pacome0106/all_chuch/main/README.md';
+    'https://raw.githubusercontent.com/Pacome0106/all_chuch/main/Privacy.md';
 // link of terms & conditions
 const String termsAndConditions =
     'https://raw.githubusercontent.com/Pacome0106/all_chuch/main/terms%20%26%20conditions';

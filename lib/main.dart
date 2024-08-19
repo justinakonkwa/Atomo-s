@@ -76,7 +76,6 @@ class _MyAppState extends State<MyApp> {
       }, onAdFailedToLoad: (error) {
         log('ad failed to load $error');
       }),
-      orientation: AppOpenAd.orientationPortrait,
     );
   }
 
