@@ -39,7 +39,7 @@ final newVersion = NewVersionPlus(
 // key for api youtube on live
 const String apiKey = 'AIzaSyD-P2V-r6OOqqG1XE7BkyQyhIoa1JP5sDo';
 // channelId for channel youtube
-const String channelId = 'UCpl-8yOibCjQYPPOU-j3Syg';
+const String channelId = 'UCETOGYlv8hRnUL5I1t5LBRw';
 
 // store redirect
 final storeRedirect = StoreRedirect.redirect(

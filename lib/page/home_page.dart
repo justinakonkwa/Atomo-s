@@ -50,24 +50,24 @@ class _HomePageState extends State<HomePage> {
   void initState() {
     _selectedIndex = widget.selectedIndex;
     super.initState();
-    // Replace 'your_ad_unit_id' with your actual Ad Unit ID
-    bannerAd = BannerAd(
-      adUnitId: getBannerAdUnitId()!,
-      size: AdSize.banner,
-      request: const AdRequest(),
-      listener: BannerAdListener(
-        onAdLoaded: (Ad ad) {
-          // Ad is loaded successfully
-          log('Ad loaded: ${ad.adUnitId}');
-        },
-        onAdFailedToLoad: (Ad ad, LoadAdError error) {
-          // Ad failed to load
-          log('Ad failed to load: $error');
-        },
-        // Add other listener methods as needed
-      ),
-    );
-    bannerAd.load();
+    // // Replace 'your_ad_unit_id' with your actual Ad Unit ID
+    // bannerAd = BannerAd(
+    //   adUnitId: getBannerAdUnitId()!,
+    //   size: AdSize.banner,
+    //   request: const AdRequest(),
+    //   listener: BannerAdListener(
+    //     onAdLoaded: (Ad ad) {
+    //       // Ad is loaded successfully
+    //       log('Ad loaded: ${ad.adUnitId}');
+    //     },
+    //     onAdFailedToLoad: (Ad ad, LoadAdError error) {
+    //       // Ad failed to load
+    //       log('Ad failed to load: $error');
+    //     },
+    //     // Add other listener methods as needed
+    //   ),
+    // );
+    // bannerAd.load();
     // checkInternetConnectivity();
     //get fonction to verify update
     advancedStatusCheck(newVersion);
